@@ -9,20 +9,72 @@ export const NavbarCustom = styled.header`
   @media screen and (max-width: 640px) {
     ul {
       z-index: 30;
+      /* transition: transform 0.5s ease-in-out;
+      transform: scale(0%); */
+      display: none;
       position: absolute;
       right: 0;
-      display: flex;
+
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 90vh;
       top: 6rem;
       width: 100%;
-      transition: transform 0.5s ease-in;
-      transform: translateX(100%);
+      transition: all 1s ease-in;
     }
+
     .active {
-      transform: translateX(0%);
+      display: flex;
+      animation: fadeIn ease 0.5s;
+      -webkit-animation: fadeIn ease 0.5s;
+      -moz-animation: fadeIn ease 0.5s;
+      -o-animation: fadeIn ease 0.5s;
+      -ms-animation: fadeIn ease 0.5s;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-o-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-ms-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 `
@@ -34,7 +86,11 @@ const Header = ({ siteTitle }) => {
   const closeMobileMenu = () => setClick(false)
   console.log(click)
   return (
-    <NavbarCustom className="bg-transparent absolute h-24 w-full flex items-center justify-between text-white px-3 sm:px-24">
+    <NavbarCustom
+      className={` h-24 w-full flex items-center justify-between text-white px-3 sm:px-24 ${
+        click ? "relative bg-black text-white" : "absolute bg-transparent"
+      }`}
+    >
       <h1 className="text-base">
         <Link
           to="/"
@@ -57,7 +113,7 @@ const Header = ({ siteTitle }) => {
       <ul
         className={
           click
-            ? "nav-menu active bg-gray-700"
+            ? "nav-menu active bg-black"
             : "nav-menu flex w-56 justify-around  "
         }
       >
