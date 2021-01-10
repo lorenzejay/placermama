@@ -79,16 +79,19 @@ export const NavbarCustom = styled.header`
   }
 `
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, homePage }) => {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
   console.log(click)
+
   return (
     <NavbarCustom
-      className={` h-24 w-full flex items-center justify-between text-white px-3 sm:px-24 ${
-        click ? "relative bg-black text-white" : "absolute bg-transparent"
+      className={`h-24 w-full flex items-center justify-between ${
+        homePage ? "text-white" : "relative bg-black text-white"
+      } px-3 sm:px-24 ${
+        click ? "relative bg-black" : "absolute bg-transparent"
       }`}
     >
       <h1 className="text-base">
@@ -138,6 +141,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: ``,
+  homePage: false,
 }
 
 export default Header

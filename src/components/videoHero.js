@@ -22,6 +22,9 @@ const VideoHero = () => {
         <h1 className="text-4xl uppercase mb-24">
           Let us capture your adventure
         </h1>
+        <p className="text-xl hidden sm:inline-block">
+          Creating a memory that will last a lifetime.
+        </p>
       </div>
     </Hero>
   )
