@@ -14,14 +14,17 @@ export const NavbarCustom = styled.header`
       display: none;
       position: absolute;
       right: 0;
-
       flex-direction: column;
+      gap: 8vh;
       align-items: center;
       justify-content: center;
       height: 90vh;
       top: 6rem;
       width: 100%;
       transition: all 1s ease-in;
+      a {
+        font-size: x-large;
+      }
     }
 
     .active {
@@ -84,7 +87,6 @@ const Header = ({ siteTitle, homePage }) => {
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
-  console.log(click)
 
   return (
     <NavbarCustom
