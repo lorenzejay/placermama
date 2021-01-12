@@ -11,7 +11,7 @@ const ContactUs = () => {
           type="text"
           placeholder="Name"
           name="name"
-          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm outline-none focus:outline-none shadow-md w-full"
         />
       </div>
       <div className="mb-5 pt-0 w-full">
@@ -19,7 +19,7 @@ const ContactUs = () => {
           type="email"
           placeholder="Email"
           name="email"
-          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm outline-none focus:outline-none shadow-md w-full"
         />
       </div>
       <div className="mb-5 pt-0 w-full">
@@ -27,7 +27,7 @@ const ContactUs = () => {
           type="text"
           rows="5"
           placeholder="Tell us your story"
-          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm outline-none focus:outline-none shadow-md w-full"
         />
       </div>
     </form>
