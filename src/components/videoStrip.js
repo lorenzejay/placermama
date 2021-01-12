@@ -2,7 +2,7 @@ import React from "react"
 import DroneShot from "../videos/droneclip.mp4"
 const VideoStrip = () => {
   return (
-    <div className="videostrip w-full h-28 p-0 m-0">
+    <div className="videostrip w-full h-28 p-0 mx-0 my-20 sm:h-36">
       <video
         style={{ zIndex: "-1" }}
         className="object-cover w-full h-full relative "

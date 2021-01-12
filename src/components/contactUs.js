@@ -2,19 +2,34 @@ import React from "react"
 
 const ContactUs = () => {
   return (
-    <form className="flex flex-col justify-center items-center my-12">
+    <form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto">
       <h1 className="uppercase text-2xl text-center">
-        Tell us about your story
+        We'd love to hear your story
       </h1>
-      <input
-        className="input border border-gray-400 appearance-none rounded w-3/4 px-3 py-3 pt-5 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
-        id="email"
-        type="email"
-        autofocus
-      />
-
-      <input name="" placeholder="contact" className="" />
-      <input name="" placeholder="contact" className="" />
+      <div className="mb-5 pt-0 w-full">
+        <input
+          type="text"
+          placeholder="Name"
+          name="name"
+          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+        />
+      </div>
+      <div className="mb-5 pt-0 w-full">
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+        />
+      </div>
+      <div className="mb-5 pt-0 w-full">
+        <textarea
+          type="text"
+          rows="5"
+          placeholder="Tell us your story"
+          className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+        />
+      </div>
     </form>
   )
 }

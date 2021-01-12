@@ -37,26 +37,31 @@ const ImageGrid = () => {
   console.log(data.allGalleriesJson.nodes)
   return (
     <div className="flex flex-col p-4">
-      <h1 className="text-4xl w-full mt-12 mb-6 text-center">Your Logo Here</h1>
-      <p className="text-md">
-        Hi, I'm John Doe and with my photography I want to immortalize your
-        wedding day in the most natural and beautiful way. For me, it's not
-        about the perfect pose, just about natural moments and pure emotions. I
-        am of course happy to advise you and lead you to the best light, but
-        above all I remain reserved and unobtrusive in order to capture the
-        whole day just as it unfolds. If you are looking for a natural and
-        authentic style, take a look at my portfolio and just write to me about
-        yourself and your ideas. I look forward to hearing from you!
-      </p>
-      <div className="gallery mt-2">
+      <div className="my-24">
+        <h1 className="text-4xl w-full mt-12 mb-6 text-center">
+          Your Logo Here
+        </h1>
+        <p className="text-md sm:w-3/4 text-center sm:mx-auto leading-relaxed">
+          Hi, I'm John Doe and with my photography I want to immortalize your
+          wedding day in the most natural and beautiful way. For me, it's not
+          about the perfect pose, just about natural moments and pure emotions.
+          I am of course happy to advise you and lead you to the best light, but
+          above all I remain reserved and unobtrusive in order to capture the
+          whole day just as it unfolds. If you are looking for a natural and
+          authentic style, take a look at my portfolio and just write to me
+          about yourself and your ideas. I look forward to hearing from you!
+        </p>
+      </div>
+      <h2 className="text-4xl text-center">Photos</h2>
+      <div className="gallery mt-2 flex flex-col items-center justify-center">
         {data.allGalleriesJson.nodes.map(item => {
           return (
             <div
-              className="relative flex flex-col my-3 items-center "
+              className="relative flex flex-col my-3  sm:w-3/4"
               key={item.id}
             >
               <img
-                className="w-full object-fit md:w-96"
+                className="w-full object-fit "
                 src={item.coverImg.childImageSharp.fluid.src}
               />
               <Overlay className="overlay hover:inline-block"></Overlay>
@@ -64,7 +69,7 @@ const ImageGrid = () => {
                 className="absolute top-1/2 left-1/2 text-white text-3xl bold uppercase z-20 w-full text-center"
                 style={{
                   transform: "translate(-50%, -50%)",
-                  fontFamily: "Source Sans Pro",
+                  fontFamily: "Source Sans Pro, Poppins",
                   fontWeight: 700,
                 }}
               >

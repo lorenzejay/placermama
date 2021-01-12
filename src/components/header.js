@@ -97,13 +97,7 @@ const Header = ({ siteTitle, homePage }) => {
       }`}
     >
       <h1 className="text-base">
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link className="uppercase text-white no-underline text-2xl" to="/">
           {siteTitle}
         </Link>
       </h1>
