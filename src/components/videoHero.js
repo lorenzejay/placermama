@@ -17,6 +17,7 @@ const VideoHero = () => {
         autoPlay
         loop
         muted
+        playsInline
       />
       <div className="absolute mt-24 top-50 left-0 z-10 w-full m-auto text-center px-3">
         <h1 className="text-4xl uppercase mb-24">

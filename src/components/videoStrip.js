@@ -11,6 +11,7 @@ const VideoStrip = () => {
         autoPlay
         loop
         muted
+        playsInline
       />
     </div>
   )
