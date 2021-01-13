@@ -9,7 +9,7 @@ import VideoStrip from "../components/videoStrip"
 
 const IndexPage = () => (
   <Layout homePage={true}>
-    <SEO title="Home" />
+    <SEO title="Los Angeles Wedding Photography and Cinematography Studio" />
     <VideoHero />
     <ImageGrid />
     <VideoStrip />

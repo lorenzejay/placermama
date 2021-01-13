@@ -15,7 +15,9 @@ export const Form = styled.form`
 
 const ContactUs = () => {
   return (
-    <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible">
+    <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="contact" />
       <h1 className="uppercase text-2xl text-center mb-12">
         We'd love to hear your story
       </h1>
@@ -32,6 +34,15 @@ const ContactUs = () => {
         placeholder="Email"
         name="email"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
+      />
+
+      <label className="mr-auto" for="date">
+        Expected Date
+      </label>
+      <input
+        type="date"
+        name="date"
+        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
 
       <textarea

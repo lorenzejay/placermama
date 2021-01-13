@@ -103,7 +103,7 @@ const Header = ({ siteTitle, homePage }) => {
       </h1>
 
       <div
-        className="menu-icon cursor-pointer block md:hidden"
+        className="menu-icon cursor-pointer block sm:hidden"
         onClick={handleClick}
       >
         <span>{click ? <FaTimes /> : <FaBars />}</span>
@@ -122,7 +122,7 @@ const Header = ({ siteTitle, homePage }) => {
           </Link>
         </li>
         <li>
-          <Link to="page-2" onClick={closeMobileMenu}>
+          <Link to="/contact" onClick={closeMobileMenu}>
             Contact
           </Link>
         </li>

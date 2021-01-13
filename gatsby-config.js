@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Wedding Studio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Los Angeles Wedding Photography and Videography studio. Your story, our camera. Let us capture your adventure.`,
+    author: `Kreativ Wedding Example Site`,
   },
   plugins: [
     `gatsby-transformer-json`,
@@ -47,6 +47,14 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: 222849054,
+        maxPosts: 6,
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

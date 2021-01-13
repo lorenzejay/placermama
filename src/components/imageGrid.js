@@ -42,31 +42,28 @@ const ImageGrid = () => {
           Your Logo Here
         </h1>
         <p className="text-md sm:w-3/4 text-center sm:mx-auto leading-relaxed">
-          Hi, I'm John Doe and with my photography I want to immortalize your
-          wedding day in the most natural and beautiful way. For me, it's not
-          about the perfect pose, just about natural moments and pure emotions.
-          I am of course happy to advise you and lead you to the best light, but
-          above all I remain reserved and unobtrusive in order to capture the
-          whole day just as it unfolds. If you are looking for a natural and
-          authentic style, take a look at my portfolio and just write to me
-          about yourself and your ideas. I look forward to hearing from you!
+          We create our wedding videos and photos based on natural emotions.
+          Gesture, light, movement - these are three indispensable elements that
+          intertwine in our shots and wedding photos. We love glamor, slow
+          wedding, rustic, boho and garden parties. With our human resources we
+          tell about emotions, atmosphere, friends, family, and most of all
+          about you! Let's create amazing wedding photos and videos that tell
+          your story together.
         </p>
       </div>
       <h2 className="text-4xl text-center">Photos</h2>
-      <div className="gallery mt-2 flex flex-col items-center justify-center">
+      <div className="gallery mt-2 flex flex-col items-center justify-center sm:grid sm:grid-cols-2 gap-4 mx-auto">
         {data.allGalleriesJson.nodes.map(item => {
           return (
-            <div
-              className="relative flex flex-col my-3  sm:w-3/4"
-              key={item.id}
-            >
+            <div className="relative flex flex-col my-3 " key={item.id}>
               <img
                 className="w-full object-fit "
                 src={item.coverImg.childImageSharp.fluid.src}
+                alt={item.title}
               />
-              <Overlay className="overlay hover:inline-block"></Overlay>
+              <Overlay className="overlay hover:inline-block "></Overlay>
               <h4
-                className="absolute top-1/2 left-1/2 text-white text-3xl bold uppercase z-20 w-full text-center"
+                className="absolute top-1/2 left-1/2  text-white text-3xl bold uppercase z-20 w-full text-center "
                 style={{
                   transform: "translate(-50%, -50%)",
                   fontFamily: "Source Sans Pro, Poppins, arial",

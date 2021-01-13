@@ -19,6 +19,7 @@ const Layout = ({ homePage, children }) => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -32,7 +33,7 @@ const Layout = ({ homePage, children }) => {
       />
       <div className="">
         <main>{children}</main>
-        <Footer />
+        <Footer author={data.site.siteMetadata?.author || "Author"} />
       </div>
     </>
   )
