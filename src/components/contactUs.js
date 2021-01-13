@@ -2,9 +2,11 @@ import React from "react"
 import styled from "styled-components"
 
 export const Form = styled.form`
+  -webkit-appearance: none;
   input,
   textarea {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    -webkit-appearance: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) !important;
     border-radius: 4px;
     margin-bottom: 15px;
     z-index: 20;
