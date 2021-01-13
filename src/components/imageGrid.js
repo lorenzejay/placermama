@@ -69,7 +69,7 @@ const ImageGrid = () => {
                 className="absolute top-1/2 left-1/2 text-white text-3xl bold uppercase z-20 w-full text-center"
                 style={{
                   transform: "translate(-50%, -50%)",
-                  fontFamily: "Source Sans Pro, Poppins",
+                  fontFamily: "Source Sans Pro, Poppins, arial",
                   fontWeight: 700,
                 }}
               >
