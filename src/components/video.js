@@ -3,7 +3,7 @@ import React from "react"
 const Video = ({ videoSrc, title }) => {
   return (
     <div
-      className="w-full relative overflow-hidden"
+      className="w-full relative overflow-hidden "
       style={{
         paddingTop: "56.25%",
       }}

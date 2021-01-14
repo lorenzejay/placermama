@@ -13,6 +13,18 @@ export const Form = styled.form`
   }
 `
 
+export const DateInput = styled.input`
+  input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+`
+
 const ContactUs = () => {
   return (
     <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
@@ -36,11 +48,12 @@ const ContactUs = () => {
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
 
-      <label className="mr-auto" for="date">
+      <label className="mr-auto" htmlFor="date">
         Expected Date
       </label>
-      <input
+      <DateInput
         type="date"
+        placeholder="Choose a date"
         name="date"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />

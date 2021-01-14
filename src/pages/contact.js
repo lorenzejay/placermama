@@ -46,7 +46,7 @@ const Contact = () => {
           name="email"
           className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
         />
-        <label className="mr-auto" for="date">
+        <label className="mr-auto" htmlFor="date">
           Wedding Date:
         </label>
         <input
