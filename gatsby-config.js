@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Wedding Studio`,
     description: `Los Angeles Wedding Photography and Videography studio. Your story, our camera. Let us capture your adventure.`,
-    author: `Kreativ Wedding Example Site`,
+    author: `Wedding Studio Example`,
   },
   plugins: [
     `gatsby-transformer-json`,
