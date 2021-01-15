@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 const Pricing = () => {
   const data = useStaticQuery(graphql`
-    query {
+    query Pricing {
       allPackagesJson {
         nodes {
           id

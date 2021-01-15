@@ -17,7 +17,7 @@ export const Overlay = styled.div`
 
 const ImageGrid = () => {
   const data = useStaticQuery(graphql`
-    query {
+    query Galleries {
       allGalleriesJson(sort: { fields: id }) {
         nodes {
           id

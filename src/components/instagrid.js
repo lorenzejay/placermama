@@ -3,7 +3,7 @@ import React from "react"
 
 const Instagrid = () => {
   const data = useStaticQuery(graphql`
-    query {
+    query Insta {
       allInstaNode(limit: 9) {
         nodes {
           localFile {
