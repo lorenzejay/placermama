@@ -6,6 +6,7 @@ import styled from "styled-components"
 
 export const NavbarCustom = styled.header`
   //handle transitions here
+
   @media screen and (max-width: 640px) {
     ul {
       z-index: 30;
@@ -62,7 +63,7 @@ export const NavbarCustom = styled.header`
       }
     }
 
-    @-o-keyframes fadeIn {
+    /* @-o-keyframes fadeIn {
       0% {
         opacity: 0;
       }
@@ -78,7 +79,7 @@ export const NavbarCustom = styled.header`
       100% {
         opacity: 1;
       }
-    }
+    } */
   }
 `
 
@@ -89,45 +90,55 @@ const Header = ({ siteTitle, homePage }) => {
   const closeMobileMenu = () => setClick(false)
 
   return (
-    <NavbarCustom
-      className={`h-24 w-full flex items-center justify-between ${
-        homePage ? "text-white" : "relative bg-black text-white"
-      } px-3 sm:px-24 ${
-        click ? "relative bg-black" : "absolute bg-transparent"
-      }`}
-    >
-      <h1 className="text-base">
-        <Link className="uppercase text-white no-underline text-2xl" to="/">
-          {siteTitle}
-        </Link>
-      </h1>
-
-      <div
-        className="menu-icon cursor-pointer block sm:hidden"
-        onClick={handleClick}
+    <div>
+      <NavbarCustom
+        className={`h-24 w-full flex items-center justify-between ${
+          homePage ? "text-white" : "relative bg-black text-white"
+        } px-3 sm:px-24 ${
+          click ? "relative bg-black" : "absolute bg-transparent"
+        }`}
       >
-        <span>{click ? <FaTimes /> : <FaBars />}</span>
-      </div>
+        <h1 className="text-base">
+          <Link
+            className="uppercase text-white no-underline text-2xl font-bold"
+            to="/"
+          >
+            {siteTitle}
+          </Link>
+        </h1>
 
-      <ul
-        className={
-          click
-            ? "nav-menu active bg-black"
-            : "nav-menu flex w-56 justify-around  "
-        }
-      >
-        <li>
-          <Link to="/" onClick={closeMobileMenu}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" onClick={closeMobileMenu}>
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </NavbarCustom>
+        <div
+          className="menu-icon cursor-pointer block sm:hidden"
+          onClick={handleClick}
+        >
+          <span>{click ? <FaTimes size={28} /> : <FaBars size={28} />}</span>
+        </div>
+
+        <ul
+          className={
+            click
+              ? "nav-menu active bg-black"
+              : "nav-menu flex md:w-72 lg:w-96 justify-around"
+          }
+        >
+          <li>
+            <Link to="/" onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={closeMobileMenu}>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" onClick={closeMobileMenu}>
+              Pricing
+            </Link>
+          </li>
+        </ul>
+      </NavbarCustom>
+    </div>
   )
 }
 

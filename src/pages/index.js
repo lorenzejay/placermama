@@ -1,5 +1,6 @@
 import React from "react"
 import ContactUs from "../components/contactUs"
+import HomeIntro from "../components/homeIntro"
 import ImageGrid from "../components/imageGrid"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,6 +12,7 @@ const IndexPage = () => (
   <Layout homePage={true}>
     <SEO title="Los Angeles Wedding Photography and Cinematography Studio" />
     <VideoHero />
+    <HomeIntro />
     <ImageGrid />
     <VideoStrip />
     <VideoGallery />

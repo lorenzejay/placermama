@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Video",
+    "price": 1600,
+    "details": [
+      "6 Hour Coverage",
+      "1 Cinematographer",
+      "3-6 Minute Highlight Film"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cine",
+    "price": 2600,
+    "details": [
+      "8 Hour Coverage",
+      "2 Cinematographers",
+      "3-6 Minute Highlight Film",
+      "Drone Footage",
+      "All Raw Files"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Hollywood",
+    "price": 3600,
+    "details": [
+      "10 Hour Coverage",
+      "2 Cinematographer",
+      "3-6 Minute Highlight Film",
+      "Drone Footage",
+      "Full Movie"
+    ]
+  }
+]

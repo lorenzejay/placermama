@@ -37,20 +37,6 @@ const ImageGrid = () => {
   console.log(data.allGalleriesJson.nodes)
   return (
     <div className="flex flex-col p-4">
-      <div className="my-24">
-        <h1 className="text-4xl w-full mt-12 mb-6 text-center">
-          Your Logo Here
-        </h1>
-        <p className="text-md sm:w-3/4 text-center sm:mx-auto leading-relaxed">
-          We create our wedding videos and photos based on natural emotions.
-          Gesture, light, movement - these are three indispensable elements that
-          intertwine in our shots and wedding photos. We love glamor, slow
-          wedding, rustic, boho and garden parties. With our human resources we
-          tell about emotions, atmosphere, friends, family, and most of all
-          about you! Let's create amazing wedding photos and videos that tell
-          your story together.
-        </p>
-      </div>
       <h2 className="text-4xl text-center">Photos</h2>
       <div className="gallery mt-2 flex flex-col items-center justify-center sm:grid sm:grid-cols-2 gap-4 mx-auto">
         {data.allGalleriesJson.nodes.map(item => {
