@@ -110,6 +110,7 @@ const Header = ({ siteTitle, homePage }) => {
         <div
           className="menu-icon cursor-pointer block sm:hidden"
           onClick={handleClick}
+          onKeyDown={handleClick}
         >
           <span>{click ? <FaTimes size={28} /> : <FaBars size={28} />}</span>
         </div>
