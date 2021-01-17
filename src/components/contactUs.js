@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 export const Form = styled.form`
@@ -13,19 +13,21 @@ export const Form = styled.form`
   }
 `
 
-export const DateInput = styled.input`
-  input[type="date"]:before {
-    content: attr(placeholder) !important;
-    color: #aaa;
-    margin-right: 0.5em;
-  }
-  input[type="date"]:focus:before,
-  input[type="date"]:valid:before {
-    content: "";
-  }
-`
+// export const DateInput = styled.input`
+//   input[type="date"]:before {
+//     content: attr(placeholder) !important;
+//     color: #aaa;
+//     margin-right: 0.5em;
+//   }
+//   input[type="date"]:focus:before,
+//   input[type="date"]:valid:before {
+//     content: "";
+//   }
+// `
 
 const ContactUs = () => {
+  const todayDate = new Date().toISOString().slice(0, 10)
+  const [currentDate, setCurrentDate] = useState(todayDate)
   return (
     <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
       <input type="hidden" name="bot-field" />
@@ -49,11 +51,12 @@ const ContactUs = () => {
       />
 
       <label className="mr-auto" htmlFor="date">
-        Expected Date
+        Wedding Date
       </label>
-      <DateInput
+      <input
         type="date"
-        placeholder="Choose a date"
+        value={currentDate}
+        onChange={e => setCurrentDate(e.target.value)}
         name="date"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />

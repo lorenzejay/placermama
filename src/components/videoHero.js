@@ -19,8 +19,10 @@ const VideoHero = () => {
         muted
         playsInline
       />
-      <div className="absolute mt-32 top-50 left-0 z-10 w-full m-auto text-center px-3">
-        <h1 className="text-4xl uppercase">Let us capture your adventure</h1>
+      <div className="absolute top-1/3 mt-20 left-0 z-10 w-full m-auto text-center px-3">
+        <h1 className="text-4xl uppercase mb-20 font-bold">
+          Let us capture your adventure
+        </h1>
         <p className="text-xl hidden sm:inline-block">
           Creating a memory that will last a lifetime.
         </p>

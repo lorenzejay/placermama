@@ -40,7 +40,6 @@ export const SideBarMenu = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 25px;
 `
 
 export const SidebarLink = styled(Link)`
@@ -53,7 +52,7 @@ export const SidebarLink = styled(Link)`
   transition: 0.2s ease-in-out;
   color: #fff;
   cursor: pointer;
-
+  margin-bottom: 5vh;
   &:hover {
     color: #01bf71;
     transition: 0.2s ease-in-out;
