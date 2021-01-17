@@ -32,7 +32,7 @@ const ContactUs = () => {
     <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
-      <h1 className="uppercase text-2xl text-center mb-12">
+      <h1 className="uppercase text-4xl text-center mb-12">
         We'd love to hear your story
       </h1>
 

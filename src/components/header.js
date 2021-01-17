@@ -92,7 +92,9 @@ const Header = ({ siteTitle, homePage, toggle }) => {
     <>
       <Nav>
         <NavContainer>
-          <NavLink className="text-base">{siteTitle}</NavLink>
+          <NavLink className="text-base" to="/">
+            {siteTitle}
+          </NavLink>
 
           <MobileIcon onClick={toggle}>
             <FaBars />
