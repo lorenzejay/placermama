@@ -34,7 +34,7 @@ const ImageGrid = () => {
       }
     }
   `)
-  console.log(data.allGalleriesJson.nodes)
+  // console.log(data.allGalleriesJson.nodes)
   return (
     <div className="flex flex-col p-4">
       <h2 className="text-4xl text-center">Photos</h2>

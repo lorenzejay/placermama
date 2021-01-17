@@ -1,145 +1,118 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
+import React from "react"
+import { Link as LinkG } from "gatsby"
 import PropTypes from "prop-types"
-import { FaTimes, FaBars } from "react-icons/fa"
+import { FaBars } from "react-icons/fa"
 import styled from "styled-components"
 
-export const NavbarCustom = styled.header`
+export const Nav = styled.header`
   //handle transitions here
+  background: #000;
+  height: 80px;
+  margin-top: -80px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+`
 
-  @media screen and (max-width: 640px) {
-    ul {
-      z-index: 30;
-      /* transition: transform 0.5s ease-in-out;
-      transform: scale(0%); */
-      display: none;
-      position: absolute;
-      right: 0;
-      flex-direction: column;
-      gap: 8vh;
-      align-items: center;
-      justify-content: center;
-      height: 90vh;
-      top: 6rem;
-      width: 100%;
-      transition: all 1s ease-in;
-      a {
-        font-size: x-large;
-      }
-    }
+export const NavContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  /* max-width: 1100px; */
+`
 
-    .active {
-      display: flex;
-      animation: fadeIn ease 0.5s;
-      -webkit-animation: fadeIn ease 0.5s;
-      -moz-animation: fadeIn ease 0.5s;
-      -o-animation: fadeIn ease 0.5s;
-      -ms-animation: fadeIn ease 0.5s;
-    }
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+//we are grabbing the link from gatsby link
+export const NavLink = styled(LinkG)`
+  color: #ffffff;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+`
 
-    @-moz-keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+export const MobileIcon = styled.div`
+  display: none;
 
-    @-webkit-keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 90%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
+`
+export const NavMenu = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: -22px;
 
-    /* @-o-keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-ms-keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    } */
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `
 
-const Header = ({ siteTitle, homePage }) => {
-  const [click, setClick] = useState(false)
+export const NavItem = styled.li`
+  height: 80px;
+`
 
-  const handleClick = () => setClick(!click)
-  const closeMobileMenu = () => setClick(false)
+//scroll links
+export const NavLinks = styled(LinkG)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
 
+  &.active {
+    border-bottom: 3px solid #01bf71;
+  }
+`
+
+const Header = ({ siteTitle, homePage, toggle }) => {
   return (
-    <div>
-      <NavbarCustom
-        className={`h-24 w-full flex items-center justify-between ${
-          homePage ? "text-white" : "relative bg-black text-white"
-        } px-3 sm:px-24 ${
-          click ? "relative bg-black" : "absolute bg-transparent"
-        }`}
-      >
-        <h1 className="text-base">
-          <Link
-            className="uppercase text-white no-underline text-2xl font-bold"
-            to="/"
-          >
-            {siteTitle}
-          </Link>
-        </h1>
+    <>
+      <Nav>
+        <NavContainer>
+          <NavLink className="text-base">{siteTitle}</NavLink>
 
-        <div
-          className="menu-icon cursor-pointer block sm:hidden"
-          onClick={handleClick}
-          onKeyDown={handleClick}
-        >
-          <span>{click ? <FaTimes size={28} /> : <FaBars size={28} />}</span>
-        </div>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
 
-        <ul
-          className={
-            click
-              ? "nav-menu active bg-black"
-              : "nav-menu flex md:w-72 lg:w-96 justify-around"
-          }
-        >
-          <li>
-            <Link to="/" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={closeMobileMenu}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/pricing" onClick={closeMobileMenu}>
-              Pricing
-            </Link>
-          </li>
-        </ul>
-      </NavbarCustom>
-    </div>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="/">Home</NavLinks>
+            </NavItem>
+
+            <NavItem>
+              <NavLinks to="/pricing">Pricing</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/contact">Contact</NavLinks>
+            </NavItem>
+          </NavMenu>
+        </NavContainer>
+      </Nav>
+    </>
   )
 }
 

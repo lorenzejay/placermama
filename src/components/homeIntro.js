@@ -2,7 +2,7 @@ import React from "react"
 
 const HomeIntro = () => {
   return (
-    <div className="my-24">
+    <div className="my-12">
       <h1 className="text-4xl w-full mt-12 mb-6 text-center">
         Los Angeles Wedding Filmmaker
       </h1>

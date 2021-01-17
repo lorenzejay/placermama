@@ -12,7 +12,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
+        name: `galleries_json`,
+        path: `./src/data/galleries.json`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `packages_json`,
+        path: `./src/data/packages.json`,
       },
     },
     {

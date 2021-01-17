@@ -8,10 +8,10 @@ export const Hero = styled.section`
 
 const VideoHero = () => {
   return (
-    <Hero className="flex flex-col items-center justify-center text-white object-contain">
+    <Hero className="flex flex-col items-center text-white object-contain pb-0 mb-0">
       <video
         style={{ zIndex: "-1" }}
-        className="object-cover w-full h-full relative "
+        className="object-cover h-full w-full  relative "
         src={Timelapse}
         type="video/mp4"
         autoPlay
@@ -19,10 +19,8 @@ const VideoHero = () => {
         muted
         playsInline
       />
-      <div className="absolute mt-24 top-50 left-0 z-10 w-full m-auto text-center px-3">
-        <h1 className="text-4xl uppercase mb-24">
-          Let us capture your adventure
-        </h1>
+      <div className="absolute mt-32 top-50 left-0 z-10 w-full m-auto text-center px-3">
+        <h1 className="text-4xl uppercase">Let us capture your adventure</h1>
         <p className="text-xl hidden sm:inline-block">
           Creating a memory that will last a lifetime.
         </p>
