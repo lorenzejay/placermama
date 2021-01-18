@@ -16,7 +16,7 @@ const Video = ({ videoSrc, title }) => {
           left: 0,
           bottom: 0,
           right: 0,
-          width: "85%",
+          width: "100%",
           height: "100%",
           margin: "0 auto",
         }}
