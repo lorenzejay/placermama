@@ -3,7 +3,7 @@ import React from "react"
 const Video = ({ videoSrc, title }) => {
   return (
     <div
-      className="w-full relative overflow-hidden my-5 text-center mx-auto"
+      className="w-full relative my-5 flex items-center justify-center text-center"
       style={{
         paddingTop: "56.25%",
       }}
@@ -19,6 +19,7 @@ const Video = ({ videoSrc, title }) => {
           right: 0,
           width: "100%",
           height: "100%",
+          margin: "0 auto",
         }}
         title={title}
         src={videoSrc}
