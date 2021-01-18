@@ -4,6 +4,7 @@ import HomeIntro from "../components/homeIntro"
 import ImageGrid from "../components/imageGrid"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Testimonial from "../components/testimonial"
 import VideoGallery from "../components/videoGallery"
 import VideoHero from "../components/videoHero"
 import VideoStrip from "../components/videoStrip"
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <HomeIntro />
     <ImageGrid />
     <VideoStrip />
+    <Testimonial />
     <VideoGallery />
     <ContactUs />
   </Layout>

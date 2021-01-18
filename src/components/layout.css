@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: "Poppins", "Source Sans Pro", Arial, Helvetica, sans-serif;
 }
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}

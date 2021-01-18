@@ -15,15 +15,15 @@ const Pricing = () => {
       }
     }
   `)
-  console.log(data.allPackagesJson.nodes)
+  // console.log(data.allPackagesJson.nodes)
   return (
     <Layout>
       <div className="min-h-screen text-white">
-        <div className="hero bg-gray-700 min-h-48 flex flex-col items-center p-5 md:h-72 md:justify-center">
-          <h1 className="text-2xl text-center my-5 md:text-5xl font-bold">
+        <div className="hero bg-gray-700 min-h-48 flex flex-col items-center p-10 md:min-h-72 md:justify-center">
+          <h1 className="text-3xl text-center my-5 md:text-5xl font-bold">
             Wedding Videography Packages
           </h1>
-          <p className="leading-relaxed md:w-1/2">
+          <p className="leading-relaxed md:w-3/4">
             Our videograohy packages are focuses on develiering cinematic
             wedding films that tell a story of your special day. The fuilmsa re
             3-6 minutes long and will be delivered between 4 - 6 weeks after the
@@ -33,7 +33,7 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="text-gray-700 flex flex-col items-center justify-center md:flex-row md:justify-around py-10 md:mt-24">
+        <div className="text-gray-700 flex flex-col justify-center md:flex-row md:justify-around py-10 md:mt-24">
           {data.allPackagesJson.nodes.map(item => (
             <div key={item.id} className="text-center my-5">
               <h1 className="font-bold text-3xl uppercase">{item.title}</h1>
