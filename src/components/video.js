@@ -12,12 +12,11 @@ const Video = ({ videoSrc, title }) => {
         style={{
           display: "block",
           position: "absolute",
-          objectFit: "cover",
           top: 0,
           left: 0,
           bottom: 0,
           right: 0,
-          width: "100%",
+          width: "85%",
           height: "100%",
           margin: "0 auto",
         }}
