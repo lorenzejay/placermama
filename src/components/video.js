@@ -3,13 +3,14 @@ import React from "react"
 const Video = ({ videoSrc, title }) => {
   return (
     <div
-      className="w-full relative overflow-hidden my-5 mx-auto block"
+      className="w-full relative overflow-hidden my-5 text-center mx-auto"
       style={{
         paddingTop: "56.25%",
       }}
     >
       <iframe
         style={{
+          display: "block",
           position: "absolute",
           objectFit: "cover",
           top: 0,
