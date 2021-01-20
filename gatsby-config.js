@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Wedding Studio`,
-    description: `Los Angeles Wedding Photography and Videography studio. Your story, our camera. Let us capture your adventure.`,
-    author: `Wedding Studio Example`,
+    title: `Placermama`,
+    description: `Los Angeles Flower Arrangements. Customizing flower arrangmenets perfect for suprising loved ones, for valentines day, and special occassions.`,
+    author: `Placermama`,
   },
   plugins: [
     `gatsby-transformer-json`,
@@ -12,17 +12,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `galleries_json`,
-        path: `./src/data/galleries.json`,
+        path: `${__dirname}/src/data/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `packages_json`,
-        path: `./src/data/packages.json`,
-      },
-    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,11 +41,17 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `limelight`,
+          `Playfair Display\:300,400,400i,700,800`,
           `Poppins\:300,400,400i,700,800`,
           `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
         display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `45156217344`,
       },
     },
 

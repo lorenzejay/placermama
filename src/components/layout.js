@@ -33,7 +33,7 @@ const Layout = ({ homePage, children }) => {
         homePage={homePage}
       />
       <div>
-        <main className="mt-20">{children}</main>
+        <main className="">{children}</main>
         <Footer author={data.site.siteMetadata?.author || "Author"} />
       </div>
     </>

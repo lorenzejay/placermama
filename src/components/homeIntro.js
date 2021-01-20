@@ -1,21 +1,27 @@
 import React from "react"
+import styled from "styled-components"
+import Instagrid from "./instagrid"
 
+export const Intro = styled.section`
+  background: #f3ebe3;
+`
 const HomeIntro = () => {
   return (
-    <div className="my-24">
+    <Intro className="py-24 h-full lg:pt-52">
       <h1 className="text-4xl w-full mt-12 mb-6 text-center">
-        Los Angeles Wedding Filmmaker
+        Los Angeles Flower Arrangements
       </h1>
       <p className="px-5 text-md sm:w-3/4 text-center sm:mx-auto leading-relaxed">
-        We create our wedding videos and photos based on natural emotions.
-        Gesture, light, movement - these are three indispensable elements that
-        intertwine in our shots and wedding photos. We love glamor, slow
-        wedding, rustic, boho and garden parties. With our human resources we
-        tell about emotions, atmosphere, friends, family, and most of all about
-        you! Let's create amazing wedding photos and videos that tell your story
-        together.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </p>
-    </div>
+      <Instagrid />
+    </Intro>
   )
 }
 

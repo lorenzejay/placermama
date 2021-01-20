@@ -4,7 +4,10 @@ import { FaYoutube, FaInstagram, FaVimeo } from "react-icons/fa"
 
 const Footer = ({ author }) => {
   return (
-    <footer className="mt-12 bg-gray-300  flex flex-col justify-center items-center w-full h-48">
+    <footer
+      className="mt-0 bg-gray-900  flex flex-col justify-center items-center w-full h-48"
+      style={{ color: "#ddc0b4" }}
+    >
       <div className="flex flex-col items-center justify-around gap-2 w-full">
         <div className="flex  justify-center ">
           <a href="https://www.youtube.com/">

@@ -6,15 +6,16 @@ import styled from "styled-components"
 
 export const Nav = styled.header`
   //handle transitions here
-  background: #000;
+  /* background: transparent; */
   height: 80px;
-  margin-top: -80px;
+  width: 100%;
   display: flex;
   align-items: center;
+
   font-size: 1rem;
-  position: sticky;
+  /* position: absolute; */
   top: 0;
-  z-index: 60;
+  z-index: 100;
 `
 
 export const NavContainer = styled.div`
@@ -24,7 +25,7 @@ export const NavContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 0 12px;
+
   /* max-width: 1100px; */
 `
 
@@ -90,10 +91,14 @@ export const NavLinks = styled(LinkG)`
 const Header = ({ siteTitle, homePage, toggle }) => {
   return (
     <>
-      <Nav>
+      <Nav
+        className={`px-5 lg:px-20 ${
+          homePage ? "absolute bg-transparent" : "bg-pink-50"
+        }`}
+      >
         <NavContainer>
           <NavLink className="text-base" to="/">
-            {siteTitle}
+            <h2 className="text-2xl tracking-widest font-thin">Placermama</h2>
           </NavLink>
 
           <MobileIcon onClick={toggle}>

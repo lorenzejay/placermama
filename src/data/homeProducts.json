@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Rose",
+    "imgSrc": "../images/flowers1.jpg",
+    "description": "The Best flower."
+  },
+  {
+    "id": 2,
+    "title": "Flower 2",
+    "imgSrc": "../images/flowers2.jpg",
+    "description": "The Best flower."
+  },
+  {
+    "id": 3,
+    "title": "Flower 3",
+    "imgSrc": "../images/flowers3.jpg",
+    "description": "The Best flower."
+  },
+  {
+    "id": 4,
+    "title": "Flower 4",
+    "imgSrc": "../images/flowers4.jpg",
+    "description": "The Best flower."
+  }
+]

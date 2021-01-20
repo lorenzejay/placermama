@@ -8,7 +8,7 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: black;
+  background: #f3ebe3;
   display: grid;
   align-items: center;
   top: 0;
@@ -19,7 +19,7 @@ export const SidebarContainer = styled.aside`
 `
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: #000;
 `
 
 export const Icon = styled.div`
@@ -50,20 +50,20 @@ export const SidebarLink = styled(Link)`
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   margin-bottom: 5vh;
-  &:hover {
+  /* &:hover {
     color: #01bf71;
     transition: 0.2s ease-in-out;
-  }
+  } */
 `
 
 const SideBar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon>
-        <CloseIcon />
+        <CloseIcon className="text-black" />
       </Icon>
 
       <SidebarWrapper>
