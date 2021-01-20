@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import ContactUs from "../components/contactUs"
 import HomeIntro from "../components/homeIntro"

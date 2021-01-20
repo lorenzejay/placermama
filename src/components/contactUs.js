@@ -17,23 +17,13 @@ export const Form = styled.form`
   }
 `
 
-// export const DateInput = styled.input`
-//   input[type="date"]:before {
-//     content: attr(placeholder) !important;
-//     color: #aaa;
-//     margin-right: 0.5em;
-//   }
-//   input[type="date"]:focus:before,
-//   input[type="date"]:valid:before {
-//     content: "";
-//   }
-// `
-
 const ContactUs = ({ isPage }) => {
   const todayDate = new Date().toISOString().slice(0, 10)
   const [currentDate, setCurrentDate] = useState(todayDate)
   return (
-    <FormWrapper className={`py-5 ${isPage ? "my-12" : "mt-20 mb-0 py-20"}`}>
+    <FormWrapper
+      className={`py-5 ${isPage ? "my-0 py-0" : "mt-20 mb-0 py-20"}`}
+    >
       <Form
         className={`flex flex-col justify-center items-center w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12`}
       >
@@ -85,3 +75,7 @@ const ContactUs = ({ isPage }) => {
 }
 
 export default ContactUs
+
+ContactUs.defaultProps = {
+  isPage: false,
+}

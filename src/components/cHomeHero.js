@@ -26,7 +26,7 @@ export const Button = styled.button`
 `
 const CHomeHero = () => {
   return (
-    <CustomHero className="text-black h-full px-10 lg:px-20 bg-gray-900">
+    <CustomHero className="text-black h-full px-10 lg:px-20 bg-gray-900 z-10">
       <div className="pt-28 w-full flex items-center justify-between flex-col-reverse lg:flex-row">
         <div className="mx-auto text-white text-center lg:text-left mt-10 pb-20 lg:pt-12 flex flex-col items-start mb-10 lg:px-auto">
           <h2 className="tracking-widest text-4xl leading-relaxed lg:leading-relaxed uppercase lg:text-5xl lg:w-3/4 lg ">

@@ -16,6 +16,10 @@ export const Nav = styled.header`
   /* position: absolute; */
   top: 0;
   z-index: 100;
+
+  .contrastbg {
+    background-color: #f3ebe3;
+  }
 `
 
 export const NavContainer = styled.div`
@@ -31,7 +35,7 @@ export const NavContainer = styled.div`
 
 //we are grabbing the link from gatsby link
 export const NavLink = styled(LinkG)`
-  color: #ffffff;
+  /* color: #ffffff; */
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -51,10 +55,10 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 85%);
+    transform: translate(-100%, 100%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    /* color: #fff; */
   }
 `
 export const NavMenu = styled.ul`
@@ -75,7 +79,7 @@ export const NavItem = styled.li`
 
 //scroll links
 export const NavLinks = styled(LinkG)`
-  color: #fff;
+  /* color: #fff; */
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -93,10 +97,10 @@ const Header = ({ siteTitle, homePage, toggle }) => {
     <>
       <Nav
         className={`px-5 lg:px-20 ${
-          homePage ? "absolute bg-transparent" : "bg-pink-50"
+          homePage ? "absolute bg-transparent" : "bg-gray-800"
         }`}
       >
-        <NavContainer>
+        <NavContainer className="text-white">
           <NavLink className="text-base" to="/">
             <h2 className="text-2xl tracking-widest font-thin">Placermama</h2>
           </NavLink>
@@ -110,9 +114,6 @@ const Header = ({ siteTitle, homePage, toggle }) => {
               <NavLinks to="/">Home</NavLinks>
             </NavItem>
 
-            <NavItem>
-              <NavLinks to="/pricing">Pricing</NavLinks>
-            </NavItem>
             <NavItem>
               <NavLinks to="/contact">Contact</NavLinks>
             </NavItem>

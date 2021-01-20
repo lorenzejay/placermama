@@ -18,8 +18,8 @@ export const Form = styled.form`
 const Contact = () => {
   return (
     <Layout>
-      <div className="pt-20">
-        <ContactUs className="" />
+      <div className="">
+        <ContactUs isPage={true} />
       </div>
     </Layout>
   )

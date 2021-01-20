@@ -12,7 +12,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/`,
+        name: "home_products",
+        path: `${__dirname}/src/data/homeProducts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "testimonials",
+        path: `${__dirname}/src/data/testimonials`,
       },
     },
 
