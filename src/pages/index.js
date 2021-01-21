@@ -11,7 +11,7 @@ import CHomeHero from "../components/cHomeHero"
 const IndexPage = () => {
   return (
     <Layout homePage={true}>
-      <SEO title="Los Angeles Wedding Photography and Cinematography Studio" />
+      <SEO title="Los Angeles Custom Flower Arrangements" />
       <CHomeHero />
 
       <HomeIntro />
